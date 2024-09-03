@@ -1,13 +1,25 @@
-import { Fragment } from "react"; 
+import { Fragment, useState } from "react";
 import { useLocation } from "react-router-dom";
 import SEO from "../../components/seo";
 import LayoutOne from "../../layouts/LayoutOne";
 import Breadcrumb from "../../wrappers/breadcrumb/Breadcrumb";
-import GoogleMap from "../../components/google-map"
+import GoogleMap from "../../components/google-map";
 
 const Contact = () => {
   let { pathname } = useLocation();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
 
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
   return (
     <Fragment>
       <SEO
@@ -16,11 +28,11 @@ const Contact = () => {
       />
       <LayoutOne headerTop="visible">
         {/* breadcrumb */}
-        <Breadcrumb 
+        <Breadcrumb
           pages={[
-            {label: "Home", path: process.env.PUBLIC_URL + "/" },
-            {label: "Contact", path: process.env.PUBLIC_URL + pathname }
-          ]} 
+            { label: "Home", path: process.env.PUBLIC_URL + "/" },
+            { label: "Contact", path: process.env.PUBLIC_URL + pathname },
+          ]}
         />
         <div className="contact-area pt-100 pb-100">
           <div className="container">
@@ -105,16 +117,30 @@ const Contact = () => {
                   <form className="contact-form-style">
                     <div className="row">
                       <div className="col-lg-6">
-                        <input name="name" placeholder="Name*" type="text" />
+                        <input
+                          name="name"
+                          placeholder="Name*"
+                          type="text"
+                          value={formData.name}
+                          onChange={handleChange}
+                        />
                       </div>
                       <div className="col-lg-6">
-                        <input name="email" placeholder="Email*" type="email" />
+                        <input
+                          name="email"
+                          placeholder="Email*"
+                          type="email"
+                          value={formData.email}
+                          onChange={handleChange}
+                        />
                       </div>
                       <div className="col-lg-12">
                         <input
                           name="subject"
                           placeholder="Subject*"
                           type="text"
+                          value={formData.subject}
+                          onChange={handleChange}
                         />
                       </div>
                       <div className="col-lg-12">
@@ -122,6 +148,8 @@ const Contact = () => {
                           name="message"
                           placeholder="Your Message*"
                           defaultValue={""}
+                          value={formData.message}
+                          onChange={handleChange}
                         />
                         <button className="submit" type="submit">
                           SEND
