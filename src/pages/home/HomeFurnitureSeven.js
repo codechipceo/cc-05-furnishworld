@@ -13,19 +13,16 @@ import { useTools } from "../../hooks/useTools";
 import { getAllProducts } from "../../thunk/thunkIndex";
 
 const HomeFurnitureSeven = () => {
-
-  const { dispatch} = useTools()
+  const { dispatch } = useTools();
   useEffect(() => {
-
-    dispatch(getAllProducts())
-
-  }, [])
+    dispatch(getAllProducts());
+  }, []);
 
   return (
     <Fragment>
       <SEO
         titleTemplate="Furniture Home"
-        description="Furniture home of flone react minimalist eCommerce template."
+        description="I ordered a bed frame and was pleasantly surprised at how quickly it arrived. The instructions were clear, and it was easy to assemble by myself. The quality is excellent, and it has completely transformed my bedroom."
       />
       <LayoutOne
         headerContainerClass="container"
