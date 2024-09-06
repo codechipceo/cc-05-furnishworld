@@ -9,10 +9,9 @@ const SectionTitleWithText = ({ spaceTopClass, spaceBottomClass }) => {
           <h5>Who Are We</h5>
           <h1>Welcome To Flone</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt labor et dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commo consequat irure{" "}
+          Explore exquisite furniture from top brands on our site
+           and elevate your home with just a click. 
+           Discover style, comfort, and elegance in one seamless shopping experience.{" "}
           </p>
         </div>
       </div>
