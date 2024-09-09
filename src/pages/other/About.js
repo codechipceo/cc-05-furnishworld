@@ -1,5 +1,5 @@
-import { Fragment } from "react"; 
-import { useLocation } from "react-router-dom"; 
+import { Fragment } from "react";
+import { useLocation } from "react-router-dom";
 import SEO from "../../components/seo";
 import LayoutOne from "../../layouts/LayoutOne";
 import Breadcrumb from "../../wrappers/breadcrumb/Breadcrumb";
@@ -17,15 +17,15 @@ const About = () => {
     <Fragment>
       <SEO
         titleTemplate="About us"
-        description="About page of flone react minimalist eCommerce template."
-      /> 
+        description="About page of Furnishworld"
+      />
       <LayoutOne headerTop="visible">
         {/* breadcrumb */}
-        <Breadcrumb 
+        <Breadcrumb
           pages={[
             {label: "Home", path: process.env.PUBLIC_URL + "/" },
             {label: "About us", path: process.env.PUBLIC_URL + pathname }
-          ]} 
+          ]}
         />
 
         {/* section title with text */}
@@ -45,10 +45,10 @@ const About = () => {
         />
 
         {/* team member */}
-        <TeamMemberOne spaceTopClass="pt-95" spaceBottomClass="pb-70" />
+        {/* <TeamMemberOne spaceTopClass="pt-95" spaceBottomClass="pb-70" /> */}
 
         {/* brand logo slider */}
-        <BrandLogoSliderOne spaceBottomClass="pb-70" />
+        <BrandLogoSliderOne spaceBottomClass="pb-70 pt-70" />
       </LayoutOne>
     </Fragment>
   );

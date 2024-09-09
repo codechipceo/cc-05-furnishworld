@@ -70,7 +70,15 @@ const Product = () => {
           /> */}
         </LayoutOne>
       ) : (
-        "No product exist"
+          <div style={{
+            height: "100vh",
+            width: '100wv',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent:'center'
+          }}>
+            <img src="/assets/img/logo/loading.gif" alt="loading" width={40}/>
+       </div>
       )}
     </Fragment>
   );

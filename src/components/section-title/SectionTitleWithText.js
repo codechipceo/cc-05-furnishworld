@@ -7,10 +7,10 @@ const SectionTitleWithText = ({ spaceTopClass, spaceBottomClass }) => {
       <div className="container">
         <div className="welcome-content text-center">
           <h5>Who Are We</h5>
-          <h1>Welcome To Flone</h1>
+          <h1>Welcome To Furnishworld</h1>
           <p>
           Explore exquisite furniture from top brands on our site
-           and elevate your home with just a click. 
+           and elevate your home with just a click.
            Discover style, comfort, and elegance in one seamless shopping experience.{" "}
           </p>
         </div>
