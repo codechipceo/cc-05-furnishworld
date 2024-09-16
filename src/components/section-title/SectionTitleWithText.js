@@ -7,13 +7,11 @@ const SectionTitleWithText = ({ spaceTopClass, spaceBottomClass }) => {
       <div className="container">
         <div className="welcome-content text-center">
           <h5>Who Are We</h5>
-          <h1>Welcome To Flone</h1>
+          <h1>Welcome To Furnishworld</h1>
           <p>
-            Where style meets comfort, and quality meets affordability. We are
-            passionate about creating beautiful spaces that you can call home.
-            Whether you’re looking for modern minimalism or classic elegance,
-            our carefully curated collections are designed to inspire and
-            enhance your living spaces.
+            Explore exquisite furniture from top brands on our site and elevate
+            your home with just a click. Discover style, comfort, and elegance
+            in one seamless shopping experience.{" "}
           </p>
         </div>
       </div>

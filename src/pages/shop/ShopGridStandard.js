@@ -77,10 +77,7 @@ const ShopGridStandard = () => {
 
   return (
     <Fragment>
-      <SEO
-        titleTemplate='Shop Page'
-        description='Shop page of flone react minimalist eCommerce template.'
-      />
+      <SEO titleTemplate='Shop Page' description='Shop page of Furnishworld' />
 
       <LayoutOne headerTop='visible'>
         {/* breadcrumb */}
@@ -112,7 +109,25 @@ const ShopGridStandard = () => {
                 />
 
                 {/* shop page content default */}
-                <ShopProducts layout={layout} products={currentData} />
+                {currentData ? (
+                  <ShopProducts layout={layout} products={currentData} />
+                ) : (
+                  <div
+                    style={{
+                      height: "100vh",
+                      width: "100wv",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <img
+                      src='/assets/img/logo/loading.gif'
+                      alt='loading'
+                      width={40}
+                    />
+                  </div>
+                )}
 
                 {/* shop product pagination */}
                 <div className='pro-pagination-style text-center mt-30'>

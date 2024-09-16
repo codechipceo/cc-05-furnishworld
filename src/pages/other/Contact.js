@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import { useLocation } from "react-router-dom";
 import SEO from "../../components/seo";
 import LayoutOne from "../../layouts/LayoutOne";
@@ -47,8 +47,7 @@ const Contact = () => {
                       <i className="fa fa-phone" />
                     </div>
                     <div className="contact-info-dec">
-                      <p>+012 345 678 102</p>
-                      <p>+012 345 678 102</p>
+                      <p>91 92057 53225</p>
                     </div>
                   </div>
                   <div className="single-contact-info">
@@ -57,13 +56,8 @@ const Contact = () => {
                     </div>
                     <div className="contact-info-dec">
                       <p>
-                        <a href="mailto:yourname@email.com">
-                          yourname@email.com
-                        </a>
-                      </p>
-                      <p>
-                        <a href="https://yourwebsitename.com">
-                          yourwebsitename.com
+                        <a href="mailto:humamkhan0007@gmail.com">
+                          humamkhan0007@gmail.com
                         </a>
                       </p>
                     </div>
@@ -73,8 +67,8 @@ const Contact = () => {
                       <i className="fa fa-map-marker" />
                     </div>
                     <div className="contact-info-dec">
-                      <p>Address goes here, </p>
-                      <p>street, Crossroad 123.</p>
+                      <p>Gate no.02 vijay market Ansari road </p>
+                      <p>Shastri park | 110053</p>
                     </div>
                   </div>
                   <div className="contact-social text-center">
@@ -86,23 +80,8 @@ const Contact = () => {
                         </a>
                       </li>
                       <li>
-                        <a href="//pinterest.com">
-                          <i className="fa fa-pinterest-p" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="//thumblr.com">
-                          <i className="fa fa-tumblr" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="//vimeo.com">
-                          <i className="fa fa-vimeo" />
-                        </a>
-                      </li>
-                      <li>
                         <a href="//twitter.com">
-                          <i className="fa fa-twitter" />
+                          <i className="fa fa-instagram" />
                         </a>
                       </li>
                     </ul>
@@ -117,30 +96,16 @@ const Contact = () => {
                   <form className="contact-form-style">
                     <div className="row">
                       <div className="col-lg-6">
-                        <input
-                          name="name"
-                          placeholder="Name*"
-                          type="text"
-                          value={formData.name}
-                          onChange={handleChange}
-                        />
+                        <input name="name" placeholder="Name*" type="text" />
                       </div>
                       <div className="col-lg-6">
-                        <input
-                          name="email"
-                          placeholder="Email*"
-                          type="email"
-                          value={formData.email}
-                          onChange={handleChange}
-                        />
+                        <input name="email" placeholder="Email*" type="email" />
                       </div>
                       <div className="col-lg-12">
                         <input
                           name="subject"
                           placeholder="Subject*"
                           type="text"
-                          value={formData.subject}
-                          onChange={handleChange}
                         />
                       </div>
                       <div className="col-lg-12">
