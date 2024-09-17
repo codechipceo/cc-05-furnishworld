@@ -2,7 +2,6 @@ import PropTypes from "prop-types";
 import { Fragment, useState } from "react";
 import clsx from "clsx";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
 import { getDiscountPrice } from "../../helpers/product";
 import ProductModal from "./ProductModal";
 import { addToCart } from "../../store/slices/cart-slice";
@@ -17,7 +16,7 @@ const ProductGridSingleEleven = ({
   compareItem,
   spaceBottomClass,
   colorClass,
-  productGridStyleClass
+  productGridStyleClass,
 }) => {
   const [modalShow, setModalShow] = useState(false);
   const discountedPrice = getDiscountPrice(product.price, product.discount);
@@ -25,9 +24,7 @@ const ProductGridSingleEleven = ({
   const finalDiscountedPrice = +(
     discountedPrice * currency.currencyRate
   ).toFixed(2);
-  const dispatch = useDispatch();
 
-  console.log(product)
   return (
     <Fragment>
       <div
@@ -38,25 +35,25 @@ const ProductGridSingleEleven = ({
           productGridStyleClass
         )}
       >
-        <div className='product-img'>
-          <Link to={process.env.PUBLIC_URL + "/product/" + product._id}>
+        <div className="product-img">
+          <Link to={`${process.env.PUBLIC_URL}/product/${product._id}`}>
             <img
-              className='default-img img-fluid'
+              className="default-img img-fluid"
               src={product.productImages[0]?.imageUrl}
-              alt=''
+              alt=""
             />
             {product.productImages.length > 1 ? (
               <img
-                className='hover-img img-fluid'
+                className="hover-img img-fluid"
                 src={product.productImages[1]?.imageUrl}
-                alt=''
+                alt=""
               />
             ) : (
               ""
             )}
           </Link>
           {product.discount || product.new ? (
-            <div className='product-img-badges'>
+            <div className="product-img-badges">
               {product.discount ? <span>-{product.discount}%</span> : ""}
               {product.new ? <span>New</span> : ""}
             </div>
@@ -134,15 +131,15 @@ const ProductGridSingleEleven = ({
               </button>
             </div> */}
         </div>
-        <div className='product-content-2'>
-          <div className='title-price-wrap-2'>
+        <div className="product-content-2">
+          <div className="title-price-wrap-2">
             <h3>
-              <Link to={"/product/" + product.id}>{product.productTitle}</Link>
+              <Link to={"/product/" + product._id}>{product.productTitle}</Link>
             </h3>
-            <div className='price-2'>
+            <div className="price-2">
               {discountedPrice !== null ? (
                 <Fragment>
-                  <span className='old'>
+                  <span className="old">
                     {currency.currencySymbol + finalProductPrice}
                   </span>
                   <span>{currency.currencySymbol + finalDiscountedPrice}</span>{" "}
@@ -177,7 +174,7 @@ ProductGridSingleEleven.propTypes = {
   product: PropTypes.shape({}),
   spaceBottomClass: PropTypes.string,
   colorClass: PropTypes.string,
-  wishlistItem: PropTypes.shape({})
+  wishlistItem: PropTypes.shape({}),
 };
 
 export default ProductGridSingleEleven;
