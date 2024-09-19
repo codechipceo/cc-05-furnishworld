@@ -1,14 +1,13 @@
 import PropTypes from "prop-types";
-import clsx from "clsx"
+import clsx from "clsx";
 import { Link } from "react-router-dom";
-import CountdownTimer from "../../components/countdown";
 
 const CountDownFive = ({
   spaceTopClass,
   spaceBottomClass,
   bgImg,
   image,
-  dateTime
+  productId,
 }) => {
   return (
     <div
@@ -19,12 +18,12 @@ const CountDownFive = ({
         <div className="row align-items-center">
           <div className="col-lg-6 mb-md-5">
             <div className="funfact-content funfact-content--style2 text-center">
-              <h2>Deal of the day</h2>
-              <div className="timer">
-                <CountdownTimer date={dateTime} />
+              <h2>Deal of the Month</h2>
+              <div className="timer mb-md-5">
+                <h3 className="animated">Enjoy This Offer Today</h3>
               </div>
-              <div className="funfact-btn funfact-btn-brown btn-hover">
-                <Link to={process.env.PUBLIC_URL + "/shop-grid-standard"}>
+              <div className="funfact-btn funfact-btn-brown btn-hover ">
+                <Link to={process.env.PUBLIC_URL + "/product/" + productId}>
                   SHOP NOW
                 </Link>
               </div>
@@ -50,7 +49,7 @@ CountDownFive.propTypes = {
   image: PropTypes.string,
   dateTime: PropTypes.string,
   spaceBottomClass: PropTypes.string,
-  spaceTopClass: PropTypes.string
+  spaceTopClass: PropTypes.string,
 };
 
 export default CountDownFive;

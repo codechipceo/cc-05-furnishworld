@@ -10,16 +10,21 @@ import CountDownFive from "../../wrappers/countdown/CountDownFive";
 import ImageSliderTwo from "../../wrappers/image-slider/ImageSliderTwo";
 import CtaTwo from "../../wrappers/cta/CtaTwo";
 import { useTools } from "../../hooks/useTools";
-import { getAllProducts } from "../../thunk/thunkIndex";
+import { getAllProducts, getDOM } from "../../thunk/thunkIndex";
+import { useSelector } from "react-redux";
 
 const HomeFurnitureSeven = () => {
-
-  const { dispatch} = useTools()
+  const { dispatch } = useTools();
+  const { dOM } = useSelector((state) => state.product);
   useEffect(() => {
-
-    dispatch(getAllProducts())
-
-  }, [])
+    dispatch(getAllProducts());
+    dispatch(
+      getDOM({
+        reqQuery: { isDeal: true },
+        sort: { updatedAt: -1 },
+      })
+    );
+  }, []);
 
   return (
     <Fragment>
@@ -49,9 +54,9 @@ const HomeFurnitureSeven = () => {
         <CountDownFive
           spaceTopClass="pt-115"
           spaceBottomClass="pb-115"
-          bgImg="/assets/img/bg/bg-6.jpg"
-          image="/assets/img/banner/deal-10.png"
-          dateTime="November 13, 2023 12:12:00"
+          bgImg={dOM.productImages[0]}
+          image={dOM.productImages[1]}
+          productId={dOM._id}
         />
         {/* blog post */}
         {/* <BlogFeaturedFive spaceTopClass="pt-100" spaceBottomClass="pb-70" /> */}
