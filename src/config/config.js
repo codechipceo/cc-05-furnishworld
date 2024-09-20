@@ -9,7 +9,6 @@ const backendUrlObj = {
   //   test: testServer,
   prod: liveServer,
 };
-
 const backendUrl = backendUrlObj[activeEnviroment];
 
 export { activeEnviroment, backendUrl };

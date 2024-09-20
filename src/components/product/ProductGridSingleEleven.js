@@ -2,7 +2,6 @@ import PropTypes from "prop-types";
 import { Fragment, useState } from "react";
 import clsx from "clsx";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
 import { getDiscountPrice } from "../../helpers/product";
 import ProductModal from "./ProductModal";
 import { addToCart } from "../../store/slices/cart-slice";
@@ -17,7 +16,7 @@ const ProductGridSingleEleven = ({
   compareItem,
   spaceBottomClass,
   colorClass,
-  productGridStyleClass
+  productGridStyleClass,
 }) => {
   const [modalShow, setModalShow] = useState(false);
   const discountedPrice = getDiscountPrice(product.price, product.discount);
@@ -25,7 +24,6 @@ const ProductGridSingleEleven = ({
   const finalDiscountedPrice = +(
     discountedPrice * currency.currencyRate
   ).toFixed(2);
-
 
   return (
     <Fragment>
@@ -36,9 +34,10 @@ const ProductGridSingleEleven = ({
           colorClass,
           productGridStyleClass
         )}
+        style={{ height: "550px" }}
       >
         <div className='product-img'>
-          <Link to={process.env.PUBLIC_URL + "/product/" + product._id}>
+          <Link to={`${process.env.PUBLIC_URL}/product/${product._id}`}>
             <img
               className='default-img img-fluid'
               src={product.productImages[0]?.imageUrl}
@@ -136,7 +135,7 @@ const ProductGridSingleEleven = ({
         <div className='product-content-2'>
           <div className='title-price-wrap-2'>
             <h3>
-              <Link to={"/product/" + product.id}>{product.productTitle}</Link>
+              <Link to={"/product/" + product._id}>{product.productTitle}</Link>
             </h3>
             <div className='price-2'>
               {discountedPrice !== null ? (
@@ -176,7 +175,7 @@ ProductGridSingleEleven.propTypes = {
   product: PropTypes.shape({}),
   spaceBottomClass: PropTypes.string,
   colorClass: PropTypes.string,
-  wishlistItem: PropTypes.shape({})
+  wishlistItem: PropTypes.shape({}),
 };
 
 export default ProductGridSingleEleven;

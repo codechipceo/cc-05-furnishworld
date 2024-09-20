@@ -607,7 +607,7 @@
     .slider-btn {
       a {
         font-size: 16px;
-        
+
         color: #fff;
         border: 1px solid #6eab49;
         background-color: #6eab49;
@@ -1333,7 +1333,7 @@
 .nav-style-3--blue .ht-swiper-button-nav {
   &:hover {
     color: #fff;
-    background-color: #053399;
+    background-color: #ff7004;
   }
 }
 
@@ -2655,10 +2655,10 @@
     margin: 0;
     margin-bottom: 50px;
 
-    color: #313131;
+    color: white;
 
     span {
-      color: #053399;
+      color: #ff7004;
     }
   }
   h3 {
@@ -2670,9 +2670,9 @@
 
     letter-spacing: -0.2px;
 
-    color: #3c3a3a;
+    color: white;
     span {
-      color: #053399;
+      color: #ff7004;
     }
     @media #{$lg-layout} {
       font-size: 52px;
@@ -2704,7 +2704,7 @@
 
     padding: 18px 40px 16px;
 
-    color: #3c3a3a;
+    color: white;
     border: 1px solid #3c3a3a;
     background-color: transparent;
     @media #{$xs-layout} {
@@ -2713,10 +2713,10 @@
       padding: 14px 30px 12px;
     }
     &:after {
-      background: #053399;
+      background: #ff7004;
     }
     &:hover {
-      border-color: #053399;
+      border-color: #ff7004;
     }
   }
 }

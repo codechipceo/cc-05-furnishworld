@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import clsx from "clsx"
+import clsx from "clsx";
 import { Link } from "react-router-dom";
 
 const CtaTwo = ({ spaceTopClass, spaceBottomClass }) => {
@@ -9,7 +9,7 @@ const CtaTwo = ({ spaceTopClass, spaceBottomClass }) => {
       style={{
         backgroundImage: `url(${
           process.env.PUBLIC_URL + "/assets/img/bg/cta-bg.jpg"
-        })`
+        })`,
       }}
     >
       <div className="container">
@@ -17,14 +17,14 @@ const CtaTwo = ({ spaceTopClass, spaceBottomClass }) => {
           <div className="col-lg-6 ms-auto me-auto">
             <div className="cta-content text-center">
               <h2 className="title">
-                Every Piece Comes With <br /> a 10 Year Guarantee
+                Every Piece Comes With <br /> a 12 Months Guarantee
               </h2>
               <p className="text">
-                All Products Sale Up To <span>40% Off</span>
+                All Products Sale Up To <span>20% Off</span>
               </p>
               <Link
                 className="cta-btn"
-                to={process.env.PUBLIC_URL + "/shop-grid-standard"}
+                to={process.env.PUBLIC_URL + "/collection"}
               >
                 SHOP NOW
               </Link>
@@ -38,7 +38,7 @@ const CtaTwo = ({ spaceTopClass, spaceBottomClass }) => {
 
 CtaTwo.propTypes = {
   spaceBottomClass: PropTypes.string,
-  spaceTopClass: PropTypes.string
+  spaceTopClass: PropTypes.string,
 };
 
 export default CtaTwo;
