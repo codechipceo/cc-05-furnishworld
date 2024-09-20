@@ -25,9 +25,8 @@ const ProductGridSingleEleven = ({
   const finalDiscountedPrice = +(
     discountedPrice * currency.currencyRate
   ).toFixed(2);
-  const dispatch = useDispatch();
 
-  console.log(product)
+
   return (
     <Fragment>
       <div

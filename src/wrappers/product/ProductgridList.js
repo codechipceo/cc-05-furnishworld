@@ -14,30 +14,40 @@ const ProductGridList = ({
 
   return (
     <Fragment>
-      {products?.map(product => {
-        return (
-          <div className="col-xl-4 col-sm-6" key={product._id}>
-            <ProductGridListSingle
-              spaceBottomClass={spaceBottomClass}
-              product={product}
-              currency={currency}
-              cartItem={
-                cartItems.find(cartItem => cartItem.id === product.id)
-              }
-              wishlistItem={
-                wishlistItems.find(
-                  wishlistItem => wishlistItem.id === product.id
-                )
-              }
-              compareItem={
-                compareItems.find(
-                  compareItem => compareItem.id === product.id
-                )
-              }
-            />
-          </div>
-        );
-      })}
+      {products.length > 0 ? (
+        products?.map((product) => {
+          return (
+            <div className='col-xl-4 col-sm-6' key={product._id}>
+              <ProductGridListSingle
+                spaceBottomClass={spaceBottomClass}
+                product={product}
+                currency={currency}
+                cartItem={cartItems.find(
+                  (cartItem) => cartItem.id === product.id
+                )}
+                wishlistItem={wishlistItems.find(
+                  (wishlistItem) => wishlistItem.id === product.id
+                )}
+                compareItem={compareItems.find(
+                  (compareItem) => compareItem.id === product.id
+                )}
+              />
+            </div>
+          );
+        })
+      ) : (
+        <div
+          style={{
+            height: "100vh",
+            width: "100wv",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <img src='/assets/img/logo/loading.gif' alt='loading' width={40} />
+        </div>
+      )}
     </Fragment>
   );
 };
