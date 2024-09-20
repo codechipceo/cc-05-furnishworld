@@ -12,7 +12,6 @@ const TabProductTwenty = ({
   productGridStyleClass
 }) => {
 
-console.log(category)
   return (
     <div className={clsx("product-area", spaceTopClass, spaceBottomClass)}>
       <div className="container">

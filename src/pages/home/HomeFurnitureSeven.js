@@ -15,7 +15,7 @@ import { useSelector } from "react-redux";
 
 const HomeFurnitureSeven = () => {
   const { dispatch } = useTools();
-  const { dOM } = useSelector((state) => state.product);
+  const { dOM } = useSelector((state) => state?.product);
   useEffect(() => {
     dispatch(getAllProducts());
     dispatch(
@@ -25,6 +25,8 @@ const HomeFurnitureSeven = () => {
       })
     );
   }, []);
+  const productImages  = dOM?.productImages ?? []
+  console.log(productImages);
 
   return (
     <Fragment>
@@ -51,13 +53,16 @@ const HomeFurnitureSeven = () => {
         {/* testimonial */}
         <TestimonialOne spaceBottomClass="pb-95" spaceTopClass="pt-100" />
         {/* countdown */}
+        {
+          dOM && dOM?.productImages?.length>0  &&
         <CountDownFive
           spaceTopClass="pt-115"
           spaceBottomClass="pb-115"
-          bgImg={dOM.productImages[0]}
-          image={dOM.productImages[1]}
-          productId={dOM._id}
+          bgImg={dOM?.productImages[0]}
+          image={dOM?.productImages[1]}
+          productId={dOM?._id}
         />
+        }
         {/* blog post */}
         {/* <BlogFeaturedFive spaceTopClass="pt-100" spaceBottomClass="pb-70" /> */}
         {/* image slider */}
