@@ -5,7 +5,7 @@ const localServer = "http://localhost:5000/";
 const liveServer = "https://api.furnishworld.in/";
 // const testServer = import.meta.env.VITE_TEST_SERVER;
 const backendUrlObj = {
-  local: localServer,
+  // local: localServer,
   //   test: testServer,
   prod: liveServer,
 };
