@@ -2,22 +2,22 @@
   {
     "id": "1",
     "image": "/assets/img/testimonial/testi-1.png",
-    "content": "I recently purchased a dining table set from [Your Furniture Brand Name], and I am absolutely thrilled with the quality. The craftsmanship is top-notch, and it looks stunning in my home. The customer service team was very helpful and made the process smooth from start to finish. Highly recommended!",
-    "customerName": "Sarah M.",
-    "title": "customer"
+    "content": "I recently purchased a dining table set from Furnishworld, and I am absolutely thrilled with the quality. The craftsmanship is top-notch, and it looks stunning in my home. The customer service team was very helpful and made the process smooth from start to finish. Highly recommended!",
+    "customerName": "Amit Mishra",
+    "title": "Doctor"
   },
   {
     "id": "2",
     "image": "/assets/img/testimonial/testi-1.png",
-    "content": "I've been searching for a new sofa for months, and I finally found the perfect one at [Your Furniture Brand Name]. Not only is it comfortable and stylish, but it was also very affordable. I couldn’t be happier with my purchase!",
-    "customerName": "Emily R.",
-    "title": "customer"
+    "content": "I've been searching for a new sofa for months, and I finally found the perfect one at Furnishworld. Not only is it comfortable and stylish, but it was also very affordable. I couldn’t be happier with my purchase!",
+    "customerName": "Irfaan Ahmed",
+    "title": "Engineer"
   },
   {
     "id": "3",
     "image": "/assets/img/testimonial/testi-1.png",
     "content": "I ordered a bed frame and was pleasantly surprised at how quickly it arrived. The instructions were clear, and it was easy to assemble by myself. The quality is excellent, and it has completely transformed my bedroom.",
-    "customerName": "John D.",
-    "title": "customer"
+    "customerName": "Jyoti",
+    "title": "Manager"
   }
 ]
