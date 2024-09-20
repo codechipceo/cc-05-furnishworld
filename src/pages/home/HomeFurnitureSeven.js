@@ -125,7 +125,7 @@ const HomeFurnitureSeven = () => {
             spaceTopClass='pt-115'
             spaceBottomClass='pb-115'
             bgImg={"/assets/img/bg/bg-6.jpg"}
-            image={dOM?.productImages[1]}
+            image={dOM?.productImages[0]?.imageUrl}
             productId={dOM?._id}
           />
         )}

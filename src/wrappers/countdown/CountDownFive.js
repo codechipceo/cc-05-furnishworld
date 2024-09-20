@@ -10,7 +10,7 @@ const CountDownFive = ({
   productId,
 }) => {
 
-  console.log(bgImg, image)
+  console.log( image)
   return (
     <div
       className={clsx("funfact-area", spaceTopClass, spaceBottomClass)}
@@ -35,7 +35,7 @@ const CountDownFive = ({
             <div className="funfact-image text-center text-lg-end" >
               <img
                 style={{maxHeight:"550px"}}
-                src={process.env.PUBLIC_URL + image?.imageUrl}
+                src={process.env.PUBLIC_URL + image}
                 alt=""
                 className="img-fluid"
               />
