@@ -34,26 +34,27 @@ const ProductGridSingleEleven = ({
           colorClass,
           productGridStyleClass
         )}
+        style={{ height: "550px" }}
       >
-        <div className="product-img">
+        <div className='product-img'>
           <Link to={`${process.env.PUBLIC_URL}/product/${product._id}`}>
             <img
-              className="default-img img-fluid"
+              className='default-img img-fluid'
               src={product.productImages[0]?.imageUrl}
-              alt=""
+              alt=''
             />
             {product.productImages.length > 1 ? (
               <img
-                className="hover-img img-fluid"
+                className='hover-img img-fluid'
                 src={product.productImages[1]?.imageUrl}
-                alt=""
+                alt=''
               />
             ) : (
               ""
             )}
           </Link>
           {product.discount || product.new ? (
-            <div className="product-img-badges">
+            <div className='product-img-badges'>
               {product.discount ? <span>-{product.discount}%</span> : ""}
               {product.new ? <span>New</span> : ""}
             </div>
@@ -131,15 +132,15 @@ const ProductGridSingleEleven = ({
               </button>
             </div> */}
         </div>
-        <div className="product-content-2">
-          <div className="title-price-wrap-2">
+        <div className='product-content-2'>
+          <div className='title-price-wrap-2'>
             <h3>
               <Link to={"/product/" + product._id}>{product.productTitle}</Link>
             </h3>
-            <div className="price-2">
+            <div className='price-2'>
               {discountedPrice !== null ? (
                 <Fragment>
-                  <span className="old">
+                  <span className='old'>
                     {currency.currencySymbol + finalProductPrice}
                   </span>
                   <span>{currency.currencySymbol + finalDiscountedPrice}</span>{" "}

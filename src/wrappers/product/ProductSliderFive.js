@@ -52,7 +52,10 @@ const ProductSliderFive = ({
   return (
     <>
       {data ? (
-        <div className={clsx("related-product-area", spaceBottomClass)}>
+        <div
+          className={clsx("related-product-area", spaceBottomClass)}
+          style={{ height: "550px" }}
+        >
           <Swiper options={settings}>
             {data.map((product) => {
               return (
