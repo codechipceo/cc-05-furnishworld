@@ -10,34 +10,42 @@ const CountDownFive = ({
   productId,
 }) => {
 
-  console.log( image)
   return (
     <div
       className={clsx("funfact-area", spaceTopClass, spaceBottomClass)}
-      style={{ backgroundImage: `url(${process.env.PUBLIC_URL + bgImg})` }}
+      style={{
+        backgroundImage: `url(${process.env.PUBLIC_URL + bgImg})`,
+      
+      }}
     >
-      <div className="container">
-        <div className="row align-items-center">
-          <div className="col-lg-6 mb-md-5">
-            <div className="funfact-content funfact-content--style2 text-center">
+      <div
+        className='container'
+        style={{ position: "relative", overflow: "hidden" }}
+      >
+        <div className='row align-items-center'>
+          <div className='col-lg-6 mb-md-5'>
+            <div className='funfact-content funfact-content--style2 text-center'>
               <h2>Deal of the Month</h2>
-              <div className="timer mb-md-5">
-                <h3 className="animated">Enjoy This Offer Today</h3>
+              <div className='timer mb-md-5'>
+                <h3 className='animated'>Enjoy This Offer Today</h3>
               </div>
-              <div className="funfact-btn funfact-btn-brown btn-hover ">
+              <div className='funfact-btn funfact-btn-brown btn-hover '>
                 <Link to={process.env.PUBLIC_URL + "/product/" + productId}>
                   SHOP NOW
                 </Link>
               </div>
             </div>
           </div>
-          <div className="col-lg-6">
-            <div className="funfact-image text-center text-lg-end" >
+          <div className='col-lg-6'>
+            <div className='funfact-image text-center text-lg-end'>
               <img
-                style={{maxHeight:"550px"}}
+                style={{
+                  maxHeight: "450px",
+
+                }}
                 src={process.env.PUBLIC_URL + image}
-                alt=""
-                className="img-fluid"
+                alt=''
+                className='img-fluid'
               />
             </div>
           </div>
