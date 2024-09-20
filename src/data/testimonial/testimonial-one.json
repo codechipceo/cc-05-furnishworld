@@ -2,22 +2,22 @@
   {
     "id": "1",
     "image": "/assets/img/testimonial/testi-1.png",
-    "content": "Furnish world made my living room redesign a breeze! From the stylish sectional to the beautiful coffee table, every piece exceeded my expectations. The delivery was fast, and the customer service team was always available to answer my questions. I’ll definitely be returning for future furniture needs!",
-    "customerName": "Sarah K.",
-    "title": "customer"
+    "content": "I recently purchased a dining table set from Furnishworld, and I am absolutely thrilled with the quality. The craftsmanship is top-notch, and it looks stunning in my home. The customer service team was very helpful and made the process smooth from start to finish. Highly recommended!",
+    "customerName": "Amit Mishra",
+    "title": "Doctor"
   },
   {
     "id": "2",
     "image": "/assets/img/testimonial/testi-1.png",
-    "content": "The king-size bed frame and matching nightstands I purchased from [Furniture Store] transformed my bedroom! The furniture is modern and sleek, yet incredibly sturdy. The materials feel premium, and the setup was quick. I’ve already received so many compliments from friends and family",
-    "customerName": "Jessica P.",
-    "title": "customer"
+    "content": "I've been searching for a new sofa for months, and I finally found the perfect one at Furnishworld. Not only is it comfortable and stylish, but it was also very affordable. I couldn’t be happier with my purchase!",
+    "customerName": "Irfaan Ahmed",
+    "title": "Engineer"
   },
   {
-    "id": "2",
+    "id": "3",
     "image": "/assets/img/testimonial/testi-1.png",
-    "content": "I recently bought a dining table and chairs from [Furniture Store], and the experience was fantastic from start to finish. The furniture looks amazing, with a clean, minimalistic design that fits perfectly in my dining room. The craftsmanship is top-notch, and the whole family enjoys dining together now. Couldn't be happier!",
-    "customerName": "David L.",
-    "title": "customer"
+    "content": "I ordered a bed frame and was pleasantly surprised at how quickly it arrived. The instructions were clear, and it was easy to assemble by myself. The quality is excellent, and it has completely transformed my bedroom.",
+    "customerName": "Jyoti",
+    "title": "Manager"
   }
 ]

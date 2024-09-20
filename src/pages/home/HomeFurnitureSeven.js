@@ -14,6 +14,8 @@ import { getAllProducts } from "../../thunk/thunkIndex";
 import { useSelector } from "react-redux";
 import ProductSliderFive from "../../wrappers/product/ProductSliderFive";
 import SectionTitleTwo from "../../components/section-title/SectionTitleTwo";
+import {  getDOM } from "../../thunk/thunkIndex";
+
 
 import SectionTitle from "../../components/section-title/SectionTitle";
 
@@ -26,6 +28,18 @@ const HomeFurnitureSeven = () => {
   const { newArrived, saleItems, bestSellers } = useSelector(
     (state) => state.product
   );
+  const { dOM } = useSelector((state) => state?.product);
+  useEffect(() => {
+    dispatch(getAllProducts());
+    dispatch(
+      getDOM({
+        reqQuery: { isDeal: true },
+        sort: { updatedAt: -1 },
+      })
+    );
+  }, []);
+  const productImages  = dOM?.productImages ?? []
+  console.log(productImages);
 
   return (
     <Fragment>
@@ -65,7 +79,7 @@ const HomeFurnitureSeven = () => {
           </div>
         </div>
 
-        <div className={clsx("product-area", "mb-25 ", "mb-25 ")} >
+        <div className={clsx("product-area", "mb-25 ", "mb-25 ")}>
           <div className='container'>
             <SectionTitle
               titleText='Best Sellers'
@@ -106,13 +120,15 @@ const HomeFurnitureSeven = () => {
         {/* testimonial */}
         <TestimonialOne spaceBottomClass='pb-95' spaceTopClass='pt-100' />
         {/* countdown */}
-        <CountDownFive
-          spaceTopClass='pt-115'
-          spaceBottomClass='pb-115'
-          bgImg='/assets/img/bg/bg-6.jpg'
-          image='/assets/img/banner/deal-10.png'
-          dateTime='November 13, 2023 12:12:00'
-        />
+        {dOM && dOM?.productImages?.length > 0 && (
+          <CountDownFive
+            spaceTopClass='pt-115'
+            spaceBottomClass='pb-115'
+            bgImg={"/assets/img/bg/bg-6.jpg"}
+            image={dOM?.productImages[1]}
+            productId={dOM?._id}
+          />
+        )}
         {/* blog post */}
         {/* <BlogFeaturedFive spaceTopClass="pt-100" spaceBottomClass="pb-70" /> */}
         {/* image slider */}
