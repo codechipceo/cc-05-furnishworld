@@ -17,10 +17,10 @@ const CtaTwo = ({ spaceTopClass, spaceBottomClass }) => {
           <div className="col-lg-6 ms-auto me-auto">
             <div className="cta-content text-center">
               <h2 className="title">
-                Every Piece Comes With <br /> a 10 Year Guarantee
+                Every Piece Comes With <br /> a 12 Months Guarantee
               </h2>
               <p className="text">
-                All Products Sale Up To <span>40% Off</span>
+                All Products Sale Up To <span>20% Off</span>
               </p>
               <Link
                 className="cta-btn"

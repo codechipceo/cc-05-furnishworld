@@ -35,7 +35,7 @@ const CountDownFive = ({
             <div className="funfact-image text-center text-lg-end" >
               <img
                 style={{maxHeight:"550px"}}
-                src={process.env.PUBLIC_URL + image.imageUrl}
+                src={process.env.PUBLIC_URL + image?.imageUrl}
                 alt=""
                 className="img-fluid"
               />

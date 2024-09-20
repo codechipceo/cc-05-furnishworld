@@ -1,16 +1,16 @@
-[
-  {
-    "id": 1,
-    "title": "Furniture <br /> Collection <span>2020</span>",
-    "subtitle": "Sale up to <span>40% off</span>",
-    "image": "/assets/img/slider/slider-34.jpg",
-    "url": "/shop-grid-standard"
+[  {
+    "id": 2,
+    "title": "Comfort in  <br /><span> Every Detail  </span>",
+    "subtitle": "Handcrafted pieces, <span>made for you.</span>",
+    "image": "/assets/img/slider/slider-36.jpg",
+    "url": "/collection"
   },
   {
-    "id": 2,
-    "title": "Furniture <br /> Collection <span>2020</span>",
-    "subtitle": "Sale up to <span>30% off</span>",
-    "image": "/assets/img/slider/slider-34.jpg",
-    "url": "/shop-grid-standard"
+    "id": 1,
+    "title":"Luxury Furniture, <br/> Crafted to <span>Perfection</span>",
+    "subtitle": "Sale up to <span>40% off</span>",
+    "image": "/assets/img/slider/slider-37.jpg",
+    "url": "/collection"
   }
+
 ]
