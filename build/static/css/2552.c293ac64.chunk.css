@@ -1,0 +1,2 @@
+.custom_container{display:flex;flex-wrap:wrap}.outer_container{margin:0 auto;max-width:1200px}.categoryCard_container{align-items:center;background-color:#eef1f1;border-radius:50%;display:flex;height:150px;justify-content:center;margin:15px;width:150px}.categoryCard_container .categoryCard_inner{align-items:center;color:red;display:flex;flex-direction:column;justify-content:center}.categoryCard_container:hover{background-color:#2d716f;cursor:pointer}.categoryCard_container:hover .categoryCard_inner p{color:#fff}
+/*# sourceMappingURL=2552.c293ac64.chunk.css.map*/
