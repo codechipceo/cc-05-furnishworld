@@ -20,6 +20,7 @@ import {  getDOM } from "../../thunk/thunkIndex";
 import SectionTitle from "../../components/section-title/SectionTitle";
 
 import clsx from "clsx";
+import { CategoriesShowcase } from "../../components/home-categories/CategoriesShowcase";
 const HomeFurnitureSeven = () => {
   const { dispatch } = useTools();
   useEffect(() => {
@@ -55,6 +56,7 @@ const HomeFurnitureSeven = () => {
         <HeroSliderThirtyTwo spaceBottomClass='pb-100' />
         {/* feature icon */}
         <FeatureIconEight spaceBottomClass='pb-100' />
+        <CategoriesShowcase />
         {/* tab product */}
         {/* <TabProductTwenty
           spaceBottomClass="pb-70"

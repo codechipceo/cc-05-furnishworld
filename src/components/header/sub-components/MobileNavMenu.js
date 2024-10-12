@@ -224,7 +224,7 @@ const MobileNavMenu = () => {
           </ul> */}
         </li>
 
-        <li className="menu-item-has-children">
+        {/* <li className="menu-item-has-children">
           <Link to={process.env.PUBLIC_URL + "/shop-grid-standard"}>
             {t("shop")}
           </Link>
@@ -336,14 +336,19 @@ const MobileNavMenu = () => {
               </ul>
             </li>
           </ul>
-        </li>
+        </li> */}
         <li>
-          <Link to={process.env.PUBLIC_URL + "/shop-grid-standard"}>
+          <Link to={process.env.PUBLIC_URL + "/collection"}>
             {t("collection")}
           </Link>
         </li>
+        <li>
+          <Link to={process.env.PUBLIC_URL + "/about"}>
+            {t("about")}
+          </Link>
+        </li>
 
-        <li className="menu-item-has-children">
+        {/* <li className="menu-item-has-children">
           <Link to={process.env.PUBLIC_URL + "/"}>{t("pages")}</Link>
           <ul className="sub-menu">
             <li>
@@ -392,8 +397,8 @@ const MobileNavMenu = () => {
               </Link>
             </li>
           </ul>
-        </li>
-        <li className="menu-item-has-children">
+        </li> */}
+        {/* <li className="menu-item-has-children">
           <Link to={process.env.PUBLIC_URL + "/blog-standard"}>
             {t("blog")}
           </Link>
@@ -419,7 +424,7 @@ const MobileNavMenu = () => {
               </Link>
             </li>
           </ul>
-        </li>
+        </li> */}
         <li>
           <Link to={process.env.PUBLIC_URL + "/contact"}>
             {t("contact_us")}
